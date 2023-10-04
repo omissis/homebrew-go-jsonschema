@@ -5,20 +5,20 @@
 class GoJsonschema < Formula
   desc "go-jsonschema binary"
   homepage "https://gihub.com/omissis/go-jsonschema"
-  version "0.13.0"
+  version "0.13.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.0/go-jsonschema_Darwin_x86_64.tar.gz"
-      sha256 "ae8b90f2689131eed488834b16bcee75964521a978f9a912ba2cebe4d3f8cee5"
+    if Hardware::CPU.arm?
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.1/go-jsonschema_Darwin_arm64.tar.gz"
+      sha256 "56838e10dccbfbe91fbb82f00c380b6ed9229cd36c61c80235c318852261a0a3"
 
       def install
         bin.install 'go-jsonschema'
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.0/go-jsonschema_Darwin_arm64.tar.gz"
-      sha256 "98edb6fca4029e01b21a11c0cfb341695b73c18e8fc4bb72caf8f5f417a6204a"
+    if Hardware::CPU.intel?
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.1/go-jsonschema_Darwin_x86_64.tar.gz"
+      sha256 "a40605f5b7636cb482ac6ec9a6cbc85808183370471a4fc57cc0610a46ba86a7"
 
       def install
         bin.install 'go-jsonschema'
@@ -27,17 +27,17 @@ class GoJsonschema < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.0/go-jsonschema_Linux_arm64.tar.gz"
-      sha256 "25754b86e43de3dd9360882caea73cd257606a600e35f1e3e6ffea06707d945b"
+    if Hardware::CPU.intel?
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.1/go-jsonschema_Linux_x86_64.tar.gz"
+      sha256 "fb271152e58c413cefe2e5e06060267c7ead7cd853429e979aa7a9e7615b2c61"
 
       def install
         bin.install 'go-jsonschema'
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.0/go-jsonschema_Linux_x86_64.tar.gz"
-      sha256 "3020218622aef60b6968ef46c36d444ae7ebfe5fee1a2ac55081c1c34af80371"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.13.1/go-jsonschema_Linux_arm64.tar.gz"
+      sha256 "fc57ba082d981d103d9e0f40ee96514ddc15376b66af66307a4634343998f964"
 
       def install
         bin.install 'go-jsonschema'
