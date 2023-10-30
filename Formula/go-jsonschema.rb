@@ -5,20 +5,20 @@
 class GoJsonschema < Formula
   desc "go-jsonschema binary"
   homepage "https://gihub.com/omissis/go-jsonschema"
-  version "0.14.0"
+  version "0.14.1"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.0/go-jsonschema_Darwin_x86_64.tar.gz"
-      sha256 "1d3f765e2c9edd41f929b64328af3b5510d08689635e838dbcb0e39b27c1c01f"
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.1/go-jsonschema_Darwin_x86_64.tar.gz"
+      sha256 "e029e8f000f93052b26c54b3dc1c7394af19c12abaa752fa3bbeecb55f47b634"
 
       def install
         bin.install 'go-jsonschema'
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.0/go-jsonschema_Darwin_arm64.tar.gz"
-      sha256 "70bad5b3e817d14d60bac9f01b2aae964b7208788db08e2ebd52189ff5587524"
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.1/go-jsonschema_Darwin_arm64.tar.gz"
+      sha256 "d7f45bab6fb15f2e0378880b73c62cf5fbdf7a08fbee7259d6f881bfdbcaa6b4"
 
       def install
         bin.install 'go-jsonschema'
@@ -28,16 +28,16 @@ class GoJsonschema < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.0/go-jsonschema_Linux_arm64.tar.gz"
-      sha256 "69ddeb9d65430e39a454417296152b413f4c4d75dab4699d9bab98018ac6afa8"
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.1/go-jsonschema_Linux_arm64.tar.gz"
+      sha256 "436e5a44696a5d08171cc76d18514368b289d1b5f786cf91f30afc7582c7f9bc"
 
       def install
         bin.install 'go-jsonschema'
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.0/go-jsonschema_Linux_x86_64.tar.gz"
-      sha256 "98211790da410fee69937909b8892d78f7cfaf43997c2eaf89e3f2c3def53f40"
+      url "https://github.com/omissis/go-jsonschema/releases/download/v0.14.1/go-jsonschema_Linux_x86_64.tar.gz"
+      sha256 "c0696a88e9e3738bfd42ee1a313b6fd31e868e75f19307f59e9be84c6520ebf7"
 
       def install
         bin.install 'go-jsonschema'
